@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystery Novels</title>
+    <style>
+      body {
+        background: #dece9c;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      h1 {
+        background: #1a1831;
+        color: #ffff;
+        font-size: 65px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        width: 600px;
+        margin: 0 auto;
+      }
+      h2 {
+        color: #20615b;
+        font-size: 25px;
+        text-align: center;
+        padding: 10px;
+      }
+      p {
+        color: #1a1831;
+        font-size: 20px;
+      }
+      ul {
+        color: #1a1831;
+        font-size: 20px;
+        padding: 5px 90px;
+        margin: 5px 50px;
+      }
+      button {
+        color: #ffff;
+        font-size: 30px;
+        padding: 20px 30px 20px 30px;
+        border: 2px solid #1a1831;
+        border-radius: 30px;
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.5);
+        display: block;
+        margin: 0 auto;
+        background: #a21232;
+        transition: all 200ms ease-in-out;
+      }
+      .library-picture {
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+      }
+      .mystery-intro-paragraph {
+        border-color: #a21232;
+        border-width: 8px;
+        border-style: solid;
+        padding: 30px;
+        margin: 50px;
+      }
+      .mystery-authors-paragraph {
+        padding: 5px 30px;
+        margin: 5px 50px;
+      }
+      .mysterious-woods-picture {
+        width: 700px;
+        display: block;
+        margin: 0 auto;
+        padding: 30px;
+      }
+      .final-mystery-paragraph {
+        border-color: #a21232;
+        border-width: 8px;
+        border-style: solid;
+        padding: 30px;
+        margin: 50px;
+      }
+      .signature {
+        text-align: center;
+        padding: 20px;
+      }
+      button:hover {
+        background: transparent;
+        color: #a21232;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mystery Novels</h1>
+    <h2>Do you love a good "whodunnit"?</h2>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/304/original/Mystery_books_pic_1.jpg?1646094029"
+      alt="Girl reading mystery in library"
+      class="library-picture"
+    />
+    <p class="mystery-intro-paragraph">
+      The mystery genre is a genre of fiction that follows a crime (like a
+      murder or a disappearance) from the moment it is committed to the moment
+      it is solved. Mystery novels are often called “whodunnits” because they
+      turn the reader into a detective trying to figure out the who, what, when,
+      and how of a particular crime. Most mysteries feature a detective or
+      private eye solving a case as the central character. (credit: Dan Brown,
+      Master Class)
+      <br />
+      <br />
+      Most critics and scholars credit Edgar Allan Poe with inventing the modern
+      mystery. He published a short story called
+      <em>The Murders in the Rue Morgue</em>
+      in 1841 that featured Auguste C. Dupin, literature’s first fictional
+      detective. It was a groundbreaking moment that saw the creation of an
+      entirely new literary genre. Dupin was the first well-known character in
+      literature to work a case, gather clues, and solve a mystery. (credit: Dan
+      Brown, Master Class)
+      <br />
+      <br />
+
+      <a
+        href="https://poemuseum.org/the-murders-in-the-rue-morgue/"
+        target="_blank"
+        >Follow this link to read Poe's
+        <em>The Murders in the Rue Morgue</em>.</a
+      >
+    </p>
+    <hr />
+    <p class="mystery-authors-paragraph">
+      Since Poe, vast scores of authors have taken up the role of mystery
+      novelist. Some famous mystery writers have been:
+    </p>
+    <ul>
+      <li>Sir Arthur Conan Doyle</li>
+      <li>Agatha Christie</li>
+      <li>Daphne Du Maurier</li>
+      <li>Dorothy L. Sayers</li>
+      <li>James Patterson</li>
+      <li>Dan Brown</li>
+      <li>Ruth Rendell</li>
+      <li>Gillian Flynn</li>
+      <li>Tana French</li>
+    </ul>
+    <hr />
+    <div class="mysterious-woods-picture">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/305/original/Mystery_site_pic_1.jpg?1646094123"
+        alt="Mysterious woods"
+      />
+    </div>
+    <p class="final-mystery-paragraph">
+      Today, the mystery genre is broad and varied, including detective stories,
+      cozy mysteries, police procedurals, and capers (stories that follow the
+      criminals rather than the detective in the story). There are dozens of
+      sub-genres of the mystery novel, but they all share common ground in that
+      a main character or team is solving a mystery, usually a crime. Readers
+      love these stories for the suspense, clues, puzzles, and often, for the
+      unique personalities of the detectives in the stories. How would you like
+      to find a new mystery to feed your hunger for a good story?
+    </p>
+    <button>Get a Recommendation!</button>
+    <p class="signature">Coded by Rebecca MacPhee</p>
+    <script>
+      function bookRecommendation() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let buttonText = document.querySelector("button");
+        if (age <= 6) {
+          buttonText.innerHTML =
+            name + ", you should read Nate the Great by Marjorie Sharmat.";
+        }
+        if (age > 6 && age <= 10) {
+          buttonText.innerHTML =
+            name +
+            ", you should read Nancy Drew and the Old Clock by Carolyn Keene.";
+        }
+        if (age > 10 && age <= 14) {
+          buttonText.innerHTML =
+            name +
+            ", you should read The Mixed-Up Files of Mrs. Basil E. Frankweiler by E.L. Konigsberg.";
+        }
+        if (age > 14 && age <= 19) {
+          buttonText.innerHTML =
+            name + ", you should read The Westing Game by Ellen Raskin.";
+        }
+        if (age > 19 && age <= 30) {
+          buttonText.innerHTML =
+            name +
+            ", you should read The Beekeeper's Apprentice by Laurie R. King.";
+        }
+        if (age > 30 && age <= 40) {
+          buttonText.innerHTML =
+            name + ", you should read The Da Vinci Code by Dan Brown.";
+        }
+        if (age > 40 && age <= 50) {
+          buttonText.innerHTML =
+            name +
+            ", you should read Crocodile on the Sandbank by Elizabeth Peters.";
+        }
+        if (age > 50 && age <= 60) {
+          buttonText.innerHTML =
+            name +
+            ", you should read The No. 1 Ladies Detective Agency by Alexander McCall Smith.";
+        }
+        if (age > 60) {
+          buttonText.innerHTML =
+            name +
+            ", you should read The Adventures of Sherlock Holmes by Sir Arthur Conan Doyle.";
+        }
+      }
+      let bookRecommendationButton = document.querySelector("button");
+      bookRecommendationButton.addEventListener("click", bookRecommendation);
+    </script>
+  </body>
+</html>
